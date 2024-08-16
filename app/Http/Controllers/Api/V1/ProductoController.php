@@ -34,7 +34,7 @@ class ProductoController extends Controller
 
         //respuesta al cliente
         return response()->json([
-            'sucess' => true,
+            'success' => true,
             'message' => 'Producto creado exitosamente',
         ], 201);
     }
@@ -44,7 +44,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        return response()->json($producto, 200);//Mostrar un producto
+        return response()->json($producto, 200); // Mostrar un producto
     }
 
     /**
@@ -61,11 +61,11 @@ class ProductoController extends Controller
         ]);
 
         //actualizar datos
-        $producto ->update($datos);
+        $producto->update($datos);
 
         //respuesta al cliente
         return response()->json([
-            'sucess' => true,
+            'success' => true,
             'message' => 'Producto actualizado exitosamente',
         ], 200);
     }
@@ -75,13 +75,12 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-
         //eliminar producto
         $producto->delete();
-
-        //respuesta al cliente
+        
+        //Respuesta al cliente
         return response()->json([
-            'sucess' => true,
+            'success' => true,
             'message' => 'Producto eliminado exitosamente',
         ], 204);
     }
